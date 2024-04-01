@@ -41,3 +41,17 @@ module.exports =
           []
       browserifyOptions:
         noParse: [require.resolve('omega-pac/omega_pac.min.js')]
+  polling_pac_files:
+    files:
+      'build/js/polling_pac_files.min.js':
+        'src/js/polling_pac_files.js'
+    options:
+      alias:
+        'omega-target': 'omega-target/omega_target.min.js'
+      plugin:
+        if process.env.BUILD == 'release'
+          [['minifyify', {map: false}]]
+        else
+          []
+      browserifyOptions:
+        noParse: [require.resolve('omega-target/omega_target.min.js')]

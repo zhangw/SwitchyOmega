@@ -26,3 +26,6 @@ module.exports =
   browserify_omega_webext_proxy_script:
     files: ['src/js/omega_webext_proxy_script.js']
     tasks: ['browserify:omega_webext_proxy_script']
+  browserify_polling_pac_files:
+    files: ['src/js/polling_pac_files.js']
+    tasks: ['browserify:polling_pac_files']
